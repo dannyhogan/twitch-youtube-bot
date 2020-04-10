@@ -48,7 +48,6 @@ const handleChatConnection = (channel, socket) => {
 };
 
 const handleSongRequest = (socket, message, user, chatClient, channel) => {
-
   if (
     message.includes("!request") &&
     message.split(" ")[1].includes("www.youtube.com/watch?v=")
@@ -56,8 +55,7 @@ const handleSongRequest = (socket, message, user, chatClient, channel) => {
     const videoURL = message.split(" ")[1];
 
     getVideoDetails(videoURL)
-      .then(youtubeData => {
-
+      .then((youtubeData) => {
         socket.emit("YOUTUBE_SONG_REQUEST", {
           id: v4(),
           user,
@@ -71,7 +69,6 @@ const handleSongRequest = (socket, message, user, chatClient, channel) => {
           channel,
           `@${user}: Your request has been added to the queue!`
         );
-
       })
       .catch((err) => {
         chatClient.say(channel, `@${user}: Unable to find Youtube video.`);

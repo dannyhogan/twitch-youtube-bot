@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/lib/app.js"
+    "start": "node server/lib/app.js",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
@@ -14,8 +15,43 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "socket.io": "^2.3.0",
+    "tmi.js": "^1.5.0",
+    "uuid": "^7.0.3",
+    "@material-ui/core": "^4.9.9",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.9.0",
+    "react-particles-js": "^3.0.3",
+    "react-player": "^1.15.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "react-socket-io-hooks": "^1.0.0"
+  },
   "bugs": {
     "url": "https://github.com/dannyhogan/twitch-youtube-bot/issues"
   },
-  "homepage": "https://github.com/dannyhogan/twitch-youtube-bot#readme"
+  "homepage": "https://github.com/dannyhogan/twitch-youtube-bot#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
