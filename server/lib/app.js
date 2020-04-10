@@ -7,7 +7,6 @@ const io = require("socket.io")(server);
 const tmi = require("tmi.js");
 const { v4 } = require("uuid");
 const getVideoDetails = require("./services/youtubeApi");
-const port = process.env.PORT || 8080;
 
 console.log("PORTTTTT FROM ENV", port);
 
@@ -84,6 +83,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(port, () => {
-  console.log("Server started on port: ", port);
+server.listen(7891, () => {
+  console.log("Server started on port: ", 7891);
 });
