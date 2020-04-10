@@ -8,8 +8,6 @@ const tmi = require("tmi.js");
 const { v4 } = require("uuid");
 const getVideoDetails = require("./services/youtubeApi");
 
-console.log("PORTTTTT FROM ENV", port);
-
 app.use(express.static(path.join(__dirname, "../../build")));
 app.get("/", (req, res, next) => res.sendFile(__dirname + "./index.html"));
 
