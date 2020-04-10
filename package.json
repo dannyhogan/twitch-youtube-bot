@@ -41,7 +41,6 @@
   "bugs": {
     "url": "https://github.com/dannyhogan/twitch-youtube-bot/issues"
   },
-  "homepage": "https://github.com/dannyhogan/twitch-youtube-bot#readme",
   "browserslist": {
     "production": [
       ">0.2%",
