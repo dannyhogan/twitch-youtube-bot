@@ -8,6 +8,7 @@ import reducer from "./reducers/socketReducer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  console.log(process.env.PORT, 'PORT IN APP?>!?!?!?')
   return (
     <div className="App">
       <Router>
