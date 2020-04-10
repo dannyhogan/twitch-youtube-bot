@@ -1,0 +1,154 @@
+.RequestList {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  h2 {
+    color: white;
+    font-size: 2rem;
+    margin: 0.5em;
+  }
+
+  .requests-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-requests {
+    height: 75%;
+    width: 90%;
+    border: 2px solid rgba(197, 197, 197, 0.226);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(68, 68, 68, 0.5);
+    padding: 0;
+
+    .no-requests-header {
+      color: rgb(197, 197, 197);
+    }
+  }
+
+  .requests-list {
+    margin: 0;
+    border: 2px solid rgba(197, 197, 197, 0.226);
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 75%;
+    width: 90%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 1s ease-in;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+      min-height: 15%;
+      height: 15%;
+      color: white;
+      border-radius: 15px;
+      margin: 0.5rem 0;
+      background-color: rgba(19, 19, 19, 0.5);
+      border: 3px solid rgba(255, 255, 255, 0.25);
+      overflow: hidden;
+
+      a {
+        height: 100%;
+        width: max-content;
+
+        img {
+          height: 100%;
+          width: auto;
+          border-radius: 15px;
+        }
+      }
+
+      .request-data {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .request-user,
+        .request-time {
+          margin: 0;
+          width: max-content;
+        }
+      }
+
+      .request-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: max-content;
+        height: 100%;
+      }
+
+      &:nth-child(odd) {
+        background-color: rgb(59, 59, 59);
+      }
+
+      .li-play-button {
+        padding: 1rem;
+        height: 100%;
+        margin: 0.5rem;
+        width: max-content;
+        background-color: transparent;
+        outline: none;
+        border: none;
+
+        svg {
+          cursor: pointer;
+          transform: scale(3);
+          fill: rgb(200, 200, 200);
+          transition: all 0.5s ease-out;
+        }
+
+        &:hover {
+          svg {
+            transition: all 0.5s ease-in;
+            fill: rgb(80, 80, 80);
+          }
+        }
+      }
+
+      .li-delete-button {
+        padding: 1rem;
+        width: max-content;
+        height: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+
+        svg {
+          cursor: pointer;
+          transform: scale(3);
+          fill: rgb(200, 200, 200);
+          transition: all 0.5s ease-out;
+        }
+
+        &:hover {
+          svg {
+            transition: all 0.5s ease-in;
+            fill: rgb(120, 120, 120);
+          }
+        }
+      }
+    }
+  }
+}

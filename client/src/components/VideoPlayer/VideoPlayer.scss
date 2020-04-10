@@ -1,0 +1,183 @@
+.VideoPlayer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .Player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50% !important;
+    width: 100% !important;
+  }
+
+  .SongContainer {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+
+    .Info {
+      width: 100%;
+      height: 45%;
+      background-color: rgb(27, 27, 27);
+
+      h2 {
+        color: white;
+        margin: 0.5em;
+      }
+      p {
+        color: white;
+      }
+    }
+
+    .PlayerControls {
+      height: 75%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-items: center;
+      background-color: rgb(27, 27, 27);
+
+      .player-buttons {
+        width: 15rem;
+        height: 5rem;
+        height: max-content;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .PauseButton,
+        .PlayButton {
+          height: 4rem;
+          width: 4rem;
+          background: transparent;
+          outline: none;
+          border: none;
+
+          svg {
+            transform: scale(5);
+            fill: white;
+          }
+        }
+
+        .PrevSongButton,
+        .NextSongButton {
+          height: 2.5rem;
+          width: 2.5rem;
+          background: transparent;
+          outline: none;
+          border: none;
+
+          svg {
+            transform: scale(2.5);
+            fill: white;
+          }
+        }
+        
+        .PrevSongButton.disabled,
+        .NextSongButton.disabled {
+          svg {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .volume-control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 15rem;
+        height: 4rem;
+
+        svg {
+          fill: white;
+          transform: scale(1.5);
+        }
+
+        .volume-input {
+          -webkit-appearance: none !important;
+          outline: none;
+          width: 75%;
+          height: 10px;
+          background: rgb(124, 124, 124);
+          border: 2px solid rgb(26, 26, 26);
+          border-radius: 10px;
+          margin: auto;
+          transition: all 0.3s ease;
+        }
+
+        .volume-input::-webkit-slider-thumb {
+          cursor: pointer;
+          -webkit-appearance: none !important  ;
+          width: 20px;
+          height: 20px;
+          background: #9147ff;
+          border: 2px solid white;
+          box-shadow: 0px 0px 3px rgb(24, 24, 24);
+          transition: all 0.5s ease;
+          border-radius: 100%;
+
+          &:hover {
+            background-color: rgb(75, 12, 170);
+          }
+
+          &:active {
+            box-shadow: 0px 0px 1px darkgreen;
+          }
+        }
+      }
+    }
+
+    .Slider {
+      height: 30%;
+      width: 90%;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+
+      .activesong-duration,
+      .activesong-timeplayed {
+        color: white;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+      }
+
+      .slider-input {
+        -webkit-appearance: none !important;
+        outline: none;
+        width: 75%;
+        height: 10px;
+        background: rgb(124, 124, 124);
+        border: 2px solid rgb(26, 26, 26);
+        border-radius: 10px;
+        margin: auto;
+        transition: all 0.3s ease;
+      }
+
+      .slider-input::-webkit-slider-thumb {
+        cursor: pointer;
+        -webkit-appearance: none !important  ;
+        width: 20px;
+        height: 20px;
+        background: #9147ff;
+        border: 2px solid white;
+        box-shadow: 0px 0px 3px rgb(24, 24, 24);
+        transition: all 0.5s ease;
+        border-radius: 100%;
+
+        &:hover {
+          background-color: rgb(75, 12, 170);
+        }
+
+        &:active {
+          box-shadow: 0px 0px 1px darkgreen;
+        }
+      }
+    }
+  }
+}

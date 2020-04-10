@@ -1,0 +1,96 @@
+.TwitchChat {
+  height: 100%;
+  width: 20%;
+  transition: all 0.5s ease-out;
+  position: relative;
+  animation: fade-in-left 2s forwards;
+
+  .chat-instructions {
+    background-color: #FEFEFE;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    p {
+      font-weight: 700;
+      width: 90%;
+      color: rgb(24, 24, 24);
+      margin: 0;
+      overflow: hidden;
+
+      span {
+        border-radius: 10px;
+        padding: 0.5em;
+        display: block;
+        background-color: rgba(111, 0, 255, 0.315);
+      }
+    }
+  }
+
+  #chat-iframe {
+    width: 100% !important;
+    height: 80% !important;
+  }
+
+  .toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 4rem;
+    padding: 0;
+    position: absolute;
+    bottom: 0%;
+    z-index: 1000;
+    border: none;
+    background-color: white;
+    left: -4rem;
+    animation: fade-in 2s forwards 0.5s;
+    transition: all ease-in 0.5s;
+    cursor: pointer;
+    outline: none;
+
+    svg {
+      fill: rgba(0, 0, 0, 0.623);
+      transform: scale(3);
+      transition: 0.5s ease-out;
+    }
+  }
+}
+
+.TwitchChat.open {
+  transform: translateX(0%);
+
+  .toggle-button {
+    &:hover {
+      padding-left: 0.5rem;
+      transition: all ease-in 0.5s;
+      background-color: rgb(214, 214, 214);
+
+      svg {
+        transition: all ease-in 0.5s;
+        fill: black;
+      }
+    }
+  }
+}
+
+.TwitchChat.closed {
+  transform: translateX(100%);
+
+  .toggle-button {
+    &:hover {
+      padding-right: 0.5rem;
+      transition: all ease-in 0.5s;
+      background-color: rgb(214, 214, 214);
+
+      svg {
+        transition: all ease-in 0.5s;
+        fill: black;
+      }
+    }
+  }
+}
