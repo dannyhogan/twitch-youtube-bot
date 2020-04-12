@@ -82,6 +82,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(27371, () => {
-  console.log("Server started on port: 27371");
+server.listen(port, () => {
+  console.log("Server started on port: ", port);
 });
