@@ -8,13 +8,12 @@ import reducer from "./reducers/socketReducer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  console.log(process.env.PORT, 'PORT IN APP?>!?!?!?')
   return (
     <div className="App">
       <Router>
         <Header />
         <SocketProvider
-          uri={`https://twitch-youtube-bot-backend.herokuapp.com`}
+          uri={`https://twitch-youtube-bot-backend.herokuapp.com/:27371`}
           reducer={reducer}
           initialState={{
             streamer: "",
