@@ -4,9 +4,9 @@ A bot that listens for YouTube requests in Twitch chat, and displays them on scr
 
 ## Built Using - 
 ```
-NodeJS
-SocketIO
-TMI.JS
+Node.js
+Socket.IO
+tmi.js
 React
 ReactSocketIOHooks
 ```
