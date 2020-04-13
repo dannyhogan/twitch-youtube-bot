@@ -1,4 +1,5 @@
-#twitch-youtube-bot
+# twitch-youtube-bot
+
 A Twitch bot that listens for YouTube requests in chat, and displays them in an interface for a livestreamer.
 
 ## Try the Bot
