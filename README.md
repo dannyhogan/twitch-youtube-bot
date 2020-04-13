@@ -3,11 +3,14 @@
 A bot that listens for YouTube requests in Twitch chat, and displays them on screen for the streamer to view.
 
 ## Built Using - 
+```
 NodeJS
 SocketIO
 TMI.JS
 React
 ReactSocketIOHooks
+```
+
 
 ## Try the Bot -
 [LIVE on Heroku](https://twitch-youtube-bot.herokuapp.com/)
