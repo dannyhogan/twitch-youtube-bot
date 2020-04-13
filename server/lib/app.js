@@ -31,7 +31,9 @@ const handleChatConnection = (channel, socket) => {
   const chatClient = new tmi.client(options);
 
   chatClient.connect().then(() => {
-    chatClient.say(channel, "YouTube song request bot connected!");
+    setTimeout(() => {
+      chatClient.say(channel, "YouTube song request bot connected!");
+    }, 2500);
   });
 
   chatClient.on("chat", (chatChannel, chatUser, chatMessage) => {
@@ -77,6 +79,8 @@ const handleSongRequest = (socket, message, user, chatClient, channel) => {
 };
 
 io.on("connection", (socket) => {
+  console.log("socket connection backend", socket.id);
+
   socket.on("STREAMER", (channel) => {
     handleChatConnection(channel, socket);
   });

@@ -84,7 +84,7 @@ const VideoPlayer = ({
     );
   };
 
-  const PrevSong = () => {
+  const PrevSongButton = () => {
     return (
       <button
         className={`PrevSongButton ${prevClickable ? "enabled" : "disabled"}`}
@@ -95,7 +95,7 @@ const VideoPlayer = ({
     );
   };
 
-  const NextSong = () => {
+  const NextSongButton = () => {
     return (
       <button
         className={`NextSongButton ${nextClickable ? "enabled" : "disabled"}`}
@@ -133,7 +133,8 @@ const VideoPlayer = ({
       <div className="SongContainer">
         <div className="Info">
           <h2>
-            Current Video ({requests.length ? activeIndex + 1 : 0} / {requests.length}
+            Current Video ({requests.length ? activeIndex + 1 : 0} /{" "}
+            {requests.length}
             ):
           </h2>
           <p className="activesong-title">{activeSong.title}</p>
@@ -156,9 +157,9 @@ const VideoPlayer = ({
           </div>
 
           <div className="player-buttons">
-            <PrevSong />
+            <PrevSongButton />
             {playing ? <PauseButton /> : <PlayButton />}
-            <NextSong />
+            <NextSongButton />
           </div>
 
           <div className="volume-control">

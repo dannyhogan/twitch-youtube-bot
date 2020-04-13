@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Header />
         <SocketProvider
-          uri={`https://twitch-youtube-bot-backend.herokuapp.com/`}
+          uri={'https://twitch-youtube-bot.herokuapp.com/'}
           reducer={reducer}
           initialState={{
             streamer: "",
