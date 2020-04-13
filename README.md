@@ -1,6 +1,6 @@
 # twitch-youtube-bot
 
-A bot that listens for YouTube requests in Twitch chat, and displays them on screen for the streamer to view.
+A bot that will join any Twitch channel and listen for YouTube requests in chat. Video requests are displayed on an interface for the streamer to either play or delete.
 
 ## Built Using:
 ```
